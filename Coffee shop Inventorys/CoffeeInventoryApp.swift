@@ -12,11 +12,8 @@ import SwiftData
 struct CoffeeInventoryApp: App {
     var body: some Scene {
         WindowGroup {
-            InventoryListView()
-                .modelContainer(for: InventoryItem.self) // создаем SwiftData контейнер
+            CategoryListView()
+                .modelContainer(for: [Category.self, Subcategory.self, InventoryItem.self])
         }
     }
-}
-#Preview {
-    
 }
